@@ -4,16 +4,16 @@ a simple javascript modal
 usage ::
 -------------------------------------------------------------------------------------
 
-&nbsp;&nbsp;&nbsp;<code>Modal.register(document.getElementsByClassName(class name));</code><br/>
-or::
+<code>Modal.register(document.getElementsByClassName(class name));</code><br/>
+or => <br/>
 <code>Modal.register(document.getElementById(id));</code><br/>
-or::
+or => <br/>
 <code>Modal.register($('.m-modal'));</code><br/>
-or::
+or => <br/>
 <code>Modal.showUrlResponse(url);</code><br/>
-or::
+or => <br/>
 <code>Modal.showEncodedString(encoded);</code><br/>
-close::
+close => <br/>
 <code>Modal.close();</code>
 
 -------------------------------------------------------------------------------------

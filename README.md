@@ -12,7 +12,7 @@ or => <br/>
 or => <br/>
 <code>Modal.showUrlResponse('/login');</code><br/>
 or => <br/>
-<code>Modal.showEncodedString('<div/>');</code><br/>
+<code>Modal.showEncodedString(encoded);</code><br/>
 close => <br/>
 <code>Modal.close();</code>
 

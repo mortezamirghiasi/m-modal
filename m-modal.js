@@ -42,7 +42,10 @@ var Modal = (function () {
         }
     };
     Modal.remove = function () {
-        document.getElementById('m-modal-container').remove();
+        var container = document.getElementById('m-modal-container');
+        if (container) {
+            container.remove();
+        }
     };
     Modal.preLoad = function () {
         var _this = this;
@@ -69,10 +72,8 @@ var Modal = (function () {
     Modal.loadUrlResponse = function (url) {
         var _this = this;
         var xhReq = new XMLHttpRequest();
-        xhReq.onreadystatechange = function () {
+        xhReq.onload = function () {
             if (xhReq.readyState == 4) {
-                var dialog = document.getElementById('m-modal-dialog');
-                dialog.className = 'm-modal-done';
                 _this.loadEncodedString(xhReq.responseText);
             }
         };
@@ -83,8 +84,10 @@ var Modal = (function () {
     Modal.loadEncodedString = function (encodedString) {
         var dialog = document.getElementById('m-modal-dialog');
         dialog.className = 'm-modal-done';
-        dialog.innerHTML = encodedString;
+        var fragment = document.createRange().createContextualFragment(encodedString);
+        dialog.removeChild(document.getElementById('m-modal-loading'));
+        dialog.appendChild(fragment);
     };
     return Modal;
 }());
-Modal.loading = "<ul class='roatation-squar'><li></li><li></li><li></li><li></li></ul>";
+Modal.loading = "<ul class='roatation-squar' id='m-modal-loading'><li></li><li></li><li></li><li></li></ul>";

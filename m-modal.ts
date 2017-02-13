@@ -30,7 +30,7 @@ abstract class Modal {
 
 
       private static loading: string =
-    "<ul class='roatation-squar'><li></li><li></li><li></li><li></li></ul>";
+    "<ul class='roatation-squar' id='m-modal-loading'><li></li><li></li><li></li><li></li></ul>";
     
     private static setOnClick(element: HTMLElement) {
         if (element.tagName === 'A') {
@@ -45,7 +45,10 @@ abstract class Modal {
         }
     }
     private static remove(): void {
-        document.getElementById('m-modal-container').remove();
+        let container = document.getElementById('m-modal-container');
+        if(container){
+            container.remove();
+        }
     }
     private static preLoad(): void {
         if(document.getElementById('m-modal-container')){
@@ -69,10 +72,8 @@ abstract class Modal {
     }
     private static loadUrlResponse(url: string): void {
         let xhReq = new XMLHttpRequest();
-        xhReq.onreadystatechange = () => {
+        xhReq.onload = () => {
             if (xhReq.readyState == 4) {
-                let dialog = document.getElementById('m-modal-dialog');
-                dialog.className = 'm-modal-done';
                 this.loadEncodedString(xhReq.responseText);
             }
         }
@@ -83,8 +84,11 @@ abstract class Modal {
     private static loadEncodedString(encodedString: string): void {
         let dialog = document.getElementById('m-modal-dialog');
         dialog.className = 'm-modal-done';
-        dialog.innerHTML = encodedString;
+        let fragment = document.createRange().createContextualFragment(encodedString);
+        dialog.removeChild(document.getElementById('m-modal-loading'));
+        dialog.appendChild(fragment);
     }
+    
 }
 
 

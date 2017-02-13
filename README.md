@@ -4,7 +4,7 @@ a simple javascript modal
 usage ::
 -------------------------------------------------------------------------------------
 
-&nbsp;<code>Modal.register(document.getElementsByClassName(class name));</code><br/>
+&nbsp;&nbsp;&nbsp;<code>Modal.register(document.getElementsByClassName(class name));</code><br/>
 or::
 <code>Modal.register(document.getElementById(id));</code><br/>
 or::

@@ -4,8 +4,8 @@ usage ::
 
 -------------------------------------------------------------------------------------
 
-Modal.register(document.getElementsByClassName(<class name>);
-Modal.showUrlResponse(<url>);
-Modal.showEncodedString(<encoded string>);
-Modal.close();
+Modal.register(document.getElementsByClassName('m-modal'));<br/>
+Modal.showUrlResponse('/login');<br/>
+Modal.showEncodedString('<div/>');<br/>
+Modal.close();<br/>
 -------------------------------------------------------------------------------------

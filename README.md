@@ -4,10 +4,10 @@ a simple javascript modal
 usage ::
 -------------------------------------------------------------------------------------
 
-Modal.register(document.getElementsByClassName(class name));<br/>
-Modal.register(document.getElementById(id));<br/>
-Modal.register($('.m-modal'));<br/>
-Modal.showUrlResponse(url);<br/>
-Modal.showEncodedString(encoded);<br/>
-Modal.close();<br/>
+<code>Modal.register(document.getElementsByClassName(class name));</code><br/>
+<code>Modal.register(document.getElementById(id));</code><br/>
+<code>Modal.register($('.m-modal'));</code><br/>
+<code>Modal.showUrlResponse(url);</code><br/>
+<code>Modal.showEncodedString(encoded);</code><br/>
+<code>Modal.close();</code><br/>
 -------------------------------------------------------------------------------------

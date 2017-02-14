@@ -1,19 +1,19 @@
-# m-modal
+# modaly
 a simple javascript modal
 
 usage ::
 -------------------------------------------------------------------------------------
 
-<code>Modal.register(document.getElementsByClassName('m-modal'));</code><br/>
+<code>modaly.register(document.getElementsByClassName('modaly'));</code><br/>
 or => <br/>
-<code>Modal.register(document.getElementById('m-modal'));</code><br/>
+<code>modaly.register(document.getElementById('modaly'));</code><br/>
 or => <br/>
-<code>Modal.register($('.m-modal'));</code><br/>
+<code>modaly.register($('.modaly'));</code><br/>
 or => <br/>
-<code>Modal.showUrlResponse('/login');</code><br/>
+<code>modaly.urlResponse('/login');</code><br/>
 or => <br/>
-<code>Modal.showEncodedString(encoded);</code><br/>
+<code>modaly.htmlString(string);</code><br/>
 close => <br/>
-<code>Modal.close();</code>
+<code>modaly.close();</code>
 
 -------------------------------------------------------------------------------------

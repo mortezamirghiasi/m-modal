@@ -23,7 +23,7 @@ modaly.register($('.modaly'));
 //or 
 modaly.urlResponse('/login');
 //or 
-modaly.htmlString("<h2>Hello!</h2>");
+modaly.htmlString('<h2>Hello!</h2>');
 //close 
 modaly.close();
 ```

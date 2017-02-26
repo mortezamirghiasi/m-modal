@@ -10,11 +10,11 @@ Required Files
 
 usage 
 -------------------------------------------------------------------------------------
-
+Html
 ```html
 <a href='/login' class='modaly'>Login</a>
 ```
-
+Js
 ```js
 modaly.register(document.getElementsByClassName('modaly'));
 or 

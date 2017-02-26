@@ -11,6 +11,10 @@ Required Files
 usage 
 -------------------------------------------------------------------------------------
 
+```html
+<a href='/login' class='modaly'>Login</a>
+```
+
 <code>modaly.register(document.getElementsByClassName('modaly'));</code><br/>
 or  <br/>
 <code>modaly.register(document.getElementById('modaly'));</code><br/>

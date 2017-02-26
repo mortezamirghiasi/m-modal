@@ -17,15 +17,15 @@ Html
 Js
 ```js
 modaly.register(document.getElementsByClassName('modaly'));
-or 
+//or 
 modaly.register(document.getElementById('modaly'));
-or 
+//or 
 modaly.register($('.modaly'));
-or <br/>
+//or 
 modaly.urlResponse('/login');
-or 
+//or 
 modaly.htmlString("<h2>Hello!</h2>");
-close 
+//close 
 modaly.close();
 ```
 

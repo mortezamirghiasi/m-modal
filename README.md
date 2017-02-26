@@ -1,15 +1,14 @@
 # modaly
 a simple javascript modal
 
-Required Files
+usage 
 -------------------------------------------------------------------------------------
+Required Files
 <ul>
 <li>modaly.css</li>
 <li>modaly.js</li>
 </ul>
 
-usage 
--------------------------------------------------------------------------------------
 Html
 ```html
 <a href='/login' class='modaly'>Login</a>

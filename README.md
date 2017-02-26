@@ -23,7 +23,9 @@ or <br/>
 or <br/>
 <code>modaly.urlResponse('/login');</code><br/>
 or <br/>
-<code>modaly.htmlString(string);</code><br/>
+```html
+modaly.htmlString("<h2>Hello!</h2>");
+```
 close <br/>
 <code>modaly.close();</code>
 

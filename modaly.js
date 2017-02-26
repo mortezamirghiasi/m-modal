@@ -1,4 +1,3 @@
-"use strict";
 var modaly = (function () {
     function modaly() {
     }
@@ -91,4 +90,3 @@ var modaly = (function () {
     return modaly;
 }());
 modaly.loading = "<ul class='modaly-loading' id='modaly-loading'>\n    <li></li><li></li><li></li><li></li></ul>";
-exports.modaly = modaly;

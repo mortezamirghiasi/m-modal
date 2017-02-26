@@ -32,9 +32,10 @@ var modaly = (function () {
     modaly.setOnClick = function (element) {
         var _this = this;
         if (element.tagName === 'A') {
-            element.onclick = function (e) {
-                e.preventDefault();
-                var url = e.srcElement.getAttribute('href');
+            element.onclick = function (event) {
+                event.preventDefault();
+                var element = event.target || event.srcElement;
+                var url = element.getAttribute('href');
                 if (url !== null && url !== undefined && url !== '') {
                     _this.preLoad();
                     _this.loadUrlResponse(url);
@@ -72,15 +73,14 @@ var modaly = (function () {
     };
     modaly.loadUrlResponse = function (url) {
         var _this = this;
-        var xhReq = new XMLHttpRequest();
-        xhReq.onload = function () {
-            if (xhReq.readyState == 4) {
-                _this.loadEncodedString(xhReq.responseText);
-            }
+        var request = new XMLHttpRequest();
+        request.onload = function () {
+            if (request.status === 200)
+                _this.loadEncodedString(request.responseText);
         };
-        xhReq.open("GET", url, true);
-        xhReq.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        xhReq.send(null);
+        request.open("GET", url, true);
+        request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        request.send(null);
     };
     modaly.loadEncodedString = function (encodedString) {
         var dialog = document.getElementById('modaly-dialog');
@@ -90,5 +90,5 @@ var modaly = (function () {
     };
     return modaly;
 }());
-modaly.loading = "<ul class='roatation-squar' id='modaly-loading'><li></li><li></li><li></li><li></li></ul>";
+modaly.loading = "<ul class='modaly-loading' id='modaly-loading'>\n    <li></li><li></li><li></li><li></li></ul>";
 exports.modaly = modaly;

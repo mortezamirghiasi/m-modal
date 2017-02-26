@@ -15,18 +15,18 @@ usage
 <a href='/login' class='modaly'>Login</a>
 ```
 
-<code>modaly.register(document.getElementsByClassName('modaly'));</code><br/>
-or  <br/>
-<code>modaly.register(document.getElementById('modaly'));</code><br/>
+```js
+modaly.register(document.getElementsByClassName('modaly'));
+or 
+modaly.register(document.getElementById('modaly'));
+or 
+modaly.register($('.modaly'));
 or <br/>
-<code>modaly.register($('.modaly'));</code><br/>
-or <br/>
-<code>modaly.urlResponse('/login');</code><br/>
-or <br/>
-```html
+modaly.urlResponse('/login');
+or 
 modaly.htmlString("<h2>Hello!</h2>");
+close 
+modaly.close();
 ```
-close <br/>
-<code>modaly.close();</code>
 
 -------------------------------------------------------------------------------------
